@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coin Match Overlay</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="overlay-page">
+    <div class="overlay-stage">
+      <section class="overlay-card rise-in" id="overlayCard">
+        <header class="overlay-header">
+          <h1 id="overlayTitle">Coin Match</h1>
+          <span class="overlay-status" id="overlayStatus">Waiting</span>
+        </header>
+
+        <div class="timer-shell">
+          <div class="timer-box" id="timerBox">01:00</div>
+          <p class="overlay-subtitle" id="overlaySubtitle">Connect your TikTok LIVE and start a round.</p>
+        </div>
+
+        <div class="winner-banner hidden" id="winnerBanner"></div>
+
+        <div class="participant-board" id="participantBoard">
+          <div class="empty-state" id="emptyState">
+            <p>No participants yet</p>
+            <span>Gifts count as soon as the round is running.</span>
+          </div>
+          <div class="participant-list hidden" id="participantList"></div>
+        </div>
+
+        <footer class="overlay-footer">
+          <span class="participant-pill" id="participantPill">0 Participants</span>
+          <span class="event-pill" id="eventPill">Waiting for gifts</span>
+        </footer>
+      </section>
+    </div>
+
+    <script type="module" src="/overlay.js"></script>
+  </body>
+</html>
