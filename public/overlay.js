@@ -2,6 +2,7 @@ const titleElement = document.getElementById("overlayTitle");
 const statusElement = document.getElementById("overlayStatus");
 const subtitleElement = document.getElementById("overlaySubtitle");
 const timerBox = document.getElementById("timerBox");
+const stakesBanner = document.getElementById("stakesBanner");
 const emptyState = document.getElementById("emptyState");
 const participantList = document.getElementById("participantList");
 const participantPill = document.getElementById("participantPill");
@@ -10,6 +11,7 @@ const winnerBanner = document.getElementById("winnerBanner");
 
 let latestState = null;
 let countdownTimer = null;
+const stakeOverride = new URLSearchParams(window.location.search).get("stake");
 
 function formatTimer(seconds) {
   const safeSeconds = Math.max(0, Number(seconds || 0));
@@ -93,6 +95,7 @@ function updateTimerOnly() {
 function renderState(state) {
   latestState = state;
   titleElement.textContent = state.round.title;
+  stakesBanner.textContent = stakeOverride || state.round.stakeText || "100,000 Robux!";
   updateTimerOnly();
   participantPill.textContent = `${state.totals.participants} Participant${
     state.totals.participants === 1 ? "" : "s"

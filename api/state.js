@@ -6,6 +6,7 @@ const CACHE_KEY = "coin-match-state";
 const defaultState = {
   round: {
     title: "Coin Match",
+    stakeText: "100,000 Robux!",
     status: "idle",
     durationSeconds: 60,
     startedAt: null,

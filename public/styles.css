@@ -387,6 +387,11 @@ input {
   place-items: center;
   min-height: 100vh;
   padding: 24px;
+  background: transparent;
+}
+
+.overlay-page::before {
+  display: none;
 }
 
 .transparent-overlay {
@@ -406,6 +411,19 @@ input {
   gap: 14px;
   padding: 14px;
   border-radius: 28px;
+}
+
+.stakes-banner {
+  padding: 12px 16px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(255, 191, 71, 0.94), rgba(255, 79, 216, 0.94));
+  color: #220518;
+  text-align: center;
+  font-family: "Space Grotesk", "Sora", sans-serif;
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .overlay-header {
